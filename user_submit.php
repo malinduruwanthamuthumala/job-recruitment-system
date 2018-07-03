@@ -4,7 +4,6 @@ require_once('include/connection.php');
 
 if (isset($_POST['submit'])){
 
-echo "iugsdfsdf";
 echo $fname=$_POST['fname'];
 echo $lname=$_POST['lname'];
 echo $email=$_POST['email'];

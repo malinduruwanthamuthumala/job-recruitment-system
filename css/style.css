@@ -67,3 +67,25 @@ input{
 
 
 }
+.c_pic{
+	height:300px;
+	width:600px;
+}
+.p_submit{
+	
+}
+.company_details{
+	
+	
+	margin-top: 50px;
+	height:50%;
+	height:300px;
+	margin-left: 60%;
+	
+}
+.c_pic_img{
+	margin-top: -340px;
+	height:400px;
+	width:40%;
+	margin-left: 100px;
+}
