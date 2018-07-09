@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require_once('../include/connection.php');
+
  $_FILES['file']['name'];
 if(isset($_FILES['file'])){
 $name=$_FILES['file']['name'];/*getting the name of  the file*/
@@ -13,7 +14,7 @@ if(isset($name)){
 $location='../uploads/files/';
 
 $upload=move_uploaded_file($tmp_name,$location.$name) ;
-$_SESSION['u_p_location']=$upload;
+$_SESSION['u_p_cv_location']=$upload;
 if($upload){
 	if(isset($_POST['submit'])){
 
@@ -22,7 +23,7 @@ if($upload){
 	
 	 $job_type=$_POST['jtype'];
 	
-	 $c_name=$_SESSION['name'];
+	 $c_name= $_SESSION['cname'];
 	
 	 $description=$_POST['j_desc'];
 	

@@ -2,7 +2,7 @@
 session_start();
 require_once('../include/connection.php');
 
-require_once('../include/connection.php');
+
  $_FILES['file']['name'];
 if(isset($_FILES['file'])){
 $name=$_FILES['file']['name'];/*getting the name of  the file*/
@@ -20,12 +20,12 @@ if($upload){
 	if(isset($_POST['submit'])){
 
 
-	$_SESSION['apply_company']=$apply_company;
-	$_SESSION['job_id']=$job_id;
-	$_SESSION['']=$fname;
-	$lname=$_SESSION[''];
-	$email=$_SESSION[''];
-	$cv_name=$_SESSION[''];
+	 $apply_company=$_SESSION['apply_company'];
+	 $job_id=$_SESSION['job_id'];
+	echo $fname=$_SESSION['f_name'];
+	 $lname=$_SESSION['l_name'];
+	 $email=$_SESSION['email'];
+	$cv_name=$name;
 	$attachment_loc=$location.$name;
 
 
@@ -41,7 +41,7 @@ if($upload){
 }
 }
 	}else{
-		echo "please upload a file to cintinnue";
+		echo "please upload a file to continnue";
 	
 }
 }

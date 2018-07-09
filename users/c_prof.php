@@ -16,7 +16,7 @@ if($_SESSION['u_type']!='company'){
 $sql="SELECT * FROM companies WHERE user_id='$id'";
 $retriew=mysqli_query($con,$sql);
 $row=mysqli_fetch_array($retriew);
-  $_SESSION['name']=$row['name'];
+  $_SESSION['cname']=$row['name'];
   echo $_SESSION['c_e-Mail']=$row['c_e_Mail'];
  ?>
 
@@ -35,17 +35,18 @@ $row=mysqli_fetch_array($retriew);
  		<table>
  			<tr>
  		<h1>USER_ID :<?php echo $_SESSION['u_id'] ?></h1>
- 		<h1>Company name:<?php echo $_SESSION['name'] ?><a href="#" style="color:blue;font-size:15px">.   edit</a></h1>
- 		<h3>manager in charge : <?php echo  $_SESSION['f_name']." ".$_SESSION['l_name']; ?><a href="#" style="color:blue; font-size:15px;">.   edit</a></h2>
- 		<h3>manager email address: <?php echo $_SESSION['email']; ?><a href="#" style="color:blue; font-size:15px;">.   edit</a></h2>
- 		<h3>company e mail adress: <?php echo  $_SESSION['c_e-Mail']; ?><a href="#" style="color:blue; font-size:15px;">.   edit</a></h3>
+ 		<h1>Company name:<?php echo $_SESSION['cname'] ?></h1>
+ 		<h3>manager in charge : <?php echo  $_SESSION['f_name']." ".$_SESSION['l_name']; ?></h2>
+ 		<h3>manager email address: <?php echo $_SESSION['email']; ?></h2>
+ 		<h3>company e mail adress: <?php echo  $_SESSION['c_e-Mail']; ?></h3>
+ 		<form method="post"><input type="submit" value="edit" name="submit1" ></form>
  		</table>
  	</div>
 
  	<div class="c_pic_img">
  		<img src="../images/4.jpg" class="c_pic">
  		<br>
- 		<input type="submit" class="p_submit" name="submit1" value="update profile photo">
+ 		<input type="submit" class="p_submit" name="submit2" value="update profile photo">
 
 
  	</div>
@@ -74,7 +75,18 @@ if(isset($_POST['p_job'])){
 	header("location:../user_functions/post_job.php");
 }
 
+if(isset($_POST['v-requests'])){
+	header("location:../user_functions/view_cv.php");
+}
 
+if(isset($_POST['submit1'])){
+	header("location:../user_functions/form_edit.php");
+
+}
+if(isset($_POST['d_jobs'])){
+	header("location:../user_functions/delete_job.php");
+
+}
   ?>
  
  </body>

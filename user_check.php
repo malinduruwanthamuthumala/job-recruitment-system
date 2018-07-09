@@ -7,7 +7,7 @@ if($_SESSION['u_type']=='company'){
 	header("location: users/company.php");
 }
 elseif($_SESSION['u_type']=='employee'){
-	header("location: users/employee.php");
+	header("location: users/employ_prof.php");
 }
 
 

@@ -1,13 +1,9 @@
 <?php 
 session_start();
-
-
 require_once('../include/connection.php');
 $sql="SELECT * FROM job_types ";
 $result=mysqli_query($con,$sql);
 /*$row=mysqli_fetch_array($result);*/
-
-
  ?>
  <html>
  <head>
@@ -36,7 +32,6 @@ $result=mysqli_query($con,$sql);
 					echo '<option  value='."$value".'>'.$type.'</option>';
 					 
 					}
-
 					?>
 				</select>
 					<br>
@@ -45,6 +40,7 @@ $result=mysqli_query($con,$sql);
  					<label>job description</label>
  					<input type="text" name="j_desc">
  					<br>
+ 					<label>upload your files </label>
  					<input type="file" name="file">
  					<br>	
  					<input type="submit" name="submit" value="submit">

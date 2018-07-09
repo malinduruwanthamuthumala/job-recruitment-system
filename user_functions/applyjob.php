@@ -3,8 +3,8 @@ session_start();
 require_once('../include/connection.php');
 
 
- $_SESSION['apply_company']=$_POST['apply_c_name'];
- $_SESSION['job_id']=$_POST['job_id'];
+ echo $_SESSION['apply_company']=$_POST['apply_c_name'];
+ echo $_SESSION['job_id']=$_POST['job_id'];
 
 
 
