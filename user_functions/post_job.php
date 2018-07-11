@@ -7,23 +7,24 @@ $result=mysqli_query($con,$sql);
  ?>
  <html>
  <head>
+ 	<link rel="stylesheet" type="text/css" href="../css/style.css">
  	<title></title>
 
  </head>
- <body>
+ <body background="../images/d.jpg">
 
 
 
- 	<center>
- 		<div>
+ 	
+ 		<div class="jobpost">
  			
  			<form action="upload.php" method="post" enctype="multipart/form-data"> 
  					<label>job title</label>
- 					<input type="text" name="j_title">
+ 					<input type="text" name="j_title"  class="input">
  					<br>
  					
  					<label>job type</label>
-					<select   class="form-control" name="jtype">
+					<select   class="form-control" name="jtype" style="height:40px"> 
 					<?php 
 					while($row=mysqli_fetch_array($result)){
 					echo	$type=$row['type'];
@@ -38,15 +39,15 @@ $result=mysqli_query($con,$sql);
  					
 
  					<label>job description</label>
- 					<input type="text" name="j_desc">
+ 					<input type="text" name="j_desc"  class="input" style="height:100px">
  					<br>
  					<label>upload your files </label>
  					<input type="file" name="file">
  					<br>	
- 					<input type="submit" name="submit" value="submit">
+ 					<input type="submit" name="submit" value="submit" class="submit">
  			</form>
 		</div>
-	</center>
+	
  	
 
  </body>

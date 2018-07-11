@@ -22,7 +22,7 @@ if(isset($_SESSION['u_type'])){
  	<link rel="stylesheet" type="text/css" href="../css/style.css">
  	<title></title>
  </head>
- <body>
+ <body background="../images/d.jpg">
  <div class="company_details">
  		<table>
  			<tr>
@@ -37,15 +37,14 @@ if(isset($_SESSION['u_type'])){
  	<div class="c_pic_img">
  		<img src="../images/4.jpg" class="c_pic">
  		<br>
- 		<input type="submit" class="p_submit" name="submit1" value="update profile photo">
-
+ 		
 
  	</div>
 
- 	<div class="employee_functions">
+ 	<div class="employee_functions" style="width:600px;margin-left:400px">
  		<center>
  		<form method="post">
- 		<input type="submit" value="view jobs" name="view" >
+ 		<input type="submit" value="view jobs" name="view" class="submit" >
  		
  		</form>
  		</center>

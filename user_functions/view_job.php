@@ -1,6 +1,7 @@
 <?php 
 session_start();
-
+if(isset($_SESSION['u_type'])){
+	
 require_once('../include/connection.php');
 $sql="SELECT * FROM job_types ";
 $result=mysqli_query($con,$sql);
@@ -10,6 +11,7 @@ $result=mysqli_query($con,$sql);
 
  <html>
  <head>
+ 	<link rel="stylesheet" type="text/css" href="../css/style.css">
  	<title></title>
  </head>
  <body>
@@ -183,7 +185,15 @@ $sql="SELECT * FROM job_posts WHERE type='bank'";
 
 
 }
+}		
+	
+
 }
+else{
+	echo "please login to continue";
+	header("location:../web.php");
+}
+
  
 
 ?> 

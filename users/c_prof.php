@@ -17,7 +17,7 @@ $sql="SELECT * FROM companies WHERE user_id='$id'";
 $retriew=mysqli_query($con,$sql);
 $row=mysqli_fetch_array($retriew);
   $_SESSION['cname']=$row['name'];
-  echo $_SESSION['c_e-Mail']=$row['c_e_Mail'];
+ $_SESSION['c_e-Mail']=$row['c_e_Mail'];
  ?>
 
  <html>
@@ -25,7 +25,7 @@ $row=mysqli_fetch_array($retriew);
  	<title></title>..
  	<link rel="stylesheet" type="text/css" href="../css/style.css">
  </head>
- <body>
+ <body background="../images/d.jpg" >
 
  	
 
@@ -39,15 +39,14 @@ $row=mysqli_fetch_array($retriew);
  		<h3>manager in charge : <?php echo  $_SESSION['f_name']." ".$_SESSION['l_name']; ?></h2>
  		<h3>manager email address: <?php echo $_SESSION['email']; ?></h2>
  		<h3>company e mail adress: <?php echo  $_SESSION['c_e-Mail']; ?></h3>
- 		<form method="post"><input type="submit" value="edit" name="submit1" ></form>
+ 		<form method="post"><input type="submit" value="edit" name="submit1"  class="reset"></form>
  		</table>
  	</div>
 
  	<div class="c_pic_img">
  		<img src="../images/4.jpg" class="c_pic">
  		<br>
- 		<input type="submit" class="p_submit" name="submit2" value="update profile photo">
-
+ 		
 
  	</div>
 
@@ -55,13 +54,13 @@ $row=mysqli_fetch_array($retriew);
  	<div class="company_functions">
  		<center>
  		<form method="post">
- 		<input type="submit" value="post a job" name="p_job" >
+ 		<input type="submit" value="post a job" name="p_job" class="submit" style="height:50px">
  		<br><br><br>
- 		<input type="submit" value="view reports" name="v_reports">
+ 		<input type="submit" value="view reports" name="v_reports" class="submit"  style="height:50px">
  		<br><br><br>
- 		<input type="submit" value="view requests" name="v-requests">
+ 		<input type="submit" value="view requests" name="v-requests" class="submit"  style="height:50px">
  		<br><br><br>
- 		<input type="submit" value="delete job posts" name="d_jobs">
+ 		<input type="submit" value="delete job posts" name="d_jobs" class="submit"  style="height:50px">
  		</form>
  		</center>
  		

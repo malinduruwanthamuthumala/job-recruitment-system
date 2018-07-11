@@ -8,28 +8,31 @@ require_once('../include/connection.php');
  ?>
  <html>
  <head>
+ 	<link rel="stylesheet" type="text/css" href="../css/style.css">
  	<title></title>
 
  </head>
 
- <body>
+ <body background="../images/d.jpg">
+ 	<div class="editform">
  	<form action="" method="post">
  		<label>first name</label>
- 		<input type="text" name="fname" value="<?php echo $_SESSION['f_name'] ?> ">
-
+ 		<input type="text" name="fname" value="<?php echo $_SESSION['f_name'] ?> "  class="input">
+ 		<br>
  		<label>last name</label>
- 		<input type="text" name="lname" value="<?php echo $_SESSION['l_name'] ?>">
-
+ 		<input type="text" name="lname" value="<?php echo $_SESSION['l_name'] ?>"  class="input">
+ 		<br>
  		<label>email</label>
- 		<input type="text" name="m_email" value="<?php echo $_SESSION['email']?>">
-
+ 		<input type="text" name="m_email" value="<?php echo $_SESSION['email']?>"  class="input">
+ 		<br>
  		<label>company email</label>
- 		<input type="text" name="c_email" value="<?php echo  $_SESSION['c_e-Mail']; ?>">
+ 		<input type="text" name="c_email" value="<?php echo  $_SESSION['c_e-Mail']; ?>"  class="input">
 
  		<label>company name</label>
- 		<input type="text" name="C_name" value="<?php echo $_SESSION['cname'] ?>">
- 		<input type="submit" name="submit" >
+ 		<input type="text" name="C_name" value="<?php echo $_SESSION['cname'] ?>"  class="input">
+ 		<input type="submit" name="submit"  class="submit">
  	</form>
+ </div>
  </body>
  <?php 
 if(isset($_POST['submit'])){

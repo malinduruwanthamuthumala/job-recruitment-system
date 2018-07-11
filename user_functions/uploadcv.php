@@ -22,7 +22,7 @@ if($upload){
 
 	 $apply_company=$_SESSION['apply_company'];
 	 $job_id=$_SESSION['job_id'];
-	echo $fname=$_SESSION['f_name'];
+	$fname=$_SESSION['f_name'];
 	 $lname=$_SESSION['l_name'];
 	 $email=$_SESSION['email'];
 	$cv_name=$name;
@@ -37,6 +37,8 @@ if($upload){
 
 	if(!$insert){
 		echo "insertion failled";
+	}else{
+		header("location:../users/c_prof.php");
 	}
 }
 }

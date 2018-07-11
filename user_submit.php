@@ -21,6 +21,8 @@ $insert=mysqli_query($con,$querry);
  
 if(!$insert){
 	echo" failled";
+}else{
+	header("location:web.php");
 }
 }
 
