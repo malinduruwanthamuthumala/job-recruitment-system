@@ -27,9 +27,9 @@ $row=mysqli_fetch_array($retriew);
  </head>
  <body background="../images/d.jpg" >
 
- 	
-
-
+<div class="header-text3">
+			<form method="post" action="../user_functions/logout.php"><input type="submit" value="logout" name="logout"></form>
+			</div>
 
  	<div class="company_details">
  		<table>
@@ -56,8 +56,7 @@ $row=mysqli_fetch_array($retriew);
  		<form method="post">
  		<input type="submit" value="post a job" name="p_job" class="submit" style="height:50px">
  		<br><br><br>
- 		<input type="submit" value="view reports" name="v_reports" class="submit"  style="height:50px">
- 		<br><br><br>
+ 		
  		<input type="submit" value="view requests" name="v-requests" class="submit"  style="height:50px">
  		<br><br><br>
  		<input type="submit" value="delete job posts" name="d_jobs" class="submit"  style="height:50px">

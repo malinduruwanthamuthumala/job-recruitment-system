@@ -15,7 +15,10 @@ $result=mysqli_query($con,$sql);
  	<title></title>
  </head>
  <body>
+<?php 
 
+echo '<a href="../users/employ_prof.php" style="color:black">HOME</a>';
+ ?>
  <form method="post" >
  	 <?php 
 while($row=mysqli_fetch_array($result)){

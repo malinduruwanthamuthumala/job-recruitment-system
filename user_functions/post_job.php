@@ -48,7 +48,7 @@ $result=mysqli_query($con,$sql);
  			</form>
 		</div>
 	
- 	
+<?php echo '<a href="../users/c_prof.php">HOME</a>'; ?> 	
 
  </body>
  </html>

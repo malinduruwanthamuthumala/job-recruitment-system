@@ -17,6 +17,7 @@ $result=mysqli_query($con,$sql);
 while($row=(mysqli_fetch_array($result))){
 	echo '<tr>  <td>'.$row['job_id'].'</td>  <td>'. $row['fname']." ".$row['email'].'</td>  <td>'. $row['email'].'</td>  <td><a href="'.$row['location'].'">'.$row['cv_name'].'</a></td> </tr>';
 }
+echo '<a href="../users/c_prof.php">HOME</a>';
  ?>
 
 </table>

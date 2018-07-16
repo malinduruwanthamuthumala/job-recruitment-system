@@ -36,8 +36,8 @@ require_once('../include/connection.php');
  </body>
  <?php 
 if(isset($_POST['submit'])){
-	echo $fname=$_POST['fname'];
-	 echo $lname=$_POST['lname'];
+	 $fname=$_POST['fname'];
+	  $lname=$_POST['lname'];
 	$m_email=$_POST['m_email'];
 	$c_mail=$_POST['c_email'];
 	$C_name=$_POST['C_name'];
@@ -71,7 +71,7 @@ WHERE user_id = '$id'";
 	if(!$update1){
 		echo "failled";
 	}
-
+echo '<a href="../users/c_prof.php">HOME</a>';
 
 }
 

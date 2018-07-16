@@ -51,5 +51,6 @@ if($upload){
 }
 
 
-
  ?>
+
+ <?php echo '<a href="../users/c_prof.php">HOME</a>'; ?> 	
