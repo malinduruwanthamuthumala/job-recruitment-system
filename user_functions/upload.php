@@ -12,8 +12,8 @@ if(isset($name)){
 	if(!empty($name)){
 
 $location='../uploads/files/';
-
-$upload=move_uploaded_file($tmp_name,$location.$name) ;
+//method 
+$upload=move_uploaded_file($tmp_name,$location.$name) ;//parameter parsing
 $_SESSION['u_p_cv_location']=$upload;
 if($upload){
 	if(isset($_POST['submit'])){

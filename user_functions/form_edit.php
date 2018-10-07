@@ -1,10 +1,6 @@
 <?php 
 session_start();
 require_once('../include/connection.php');
-
-
-
-
  ?>
  <html>
  <head>
@@ -36,45 +32,36 @@ require_once('../include/connection.php');
  </body>
  <?php 
 if(isset($_POST['submit'])){
-	 $fname=$_POST['fname'];
-	  $lname=$_POST['lname'];
+	$fname=$_POST['fname'];
+	$_SESSION['f_name']= $fname;
+	$lname=$_POST['lname'];
+	$_SESSION['l_name']=$lname;
 	$m_email=$_POST['m_email'];
+	$_SESSION['email']=$m_email;
 	$c_mail=$_POST['c_email'];
 	$C_name=$_POST['C_name'];
 	$id=$_SESSION['u_id'];
-
 	$sql="UPDATE users
 	SET Fname='$fname',
 	 Lname='$lname',
 	 email='$m_email'
-
-
-
 	WHERE user_id='$id'";
-
-
 	$sql4="UPDATE job_posts SET c_name='$C_name' WHERE user_id='$id'";
-
 	$sql3="UPDATE companies
 SET name='$C_name',
 c_e_Mail='$c_mail'
 WHERE user_id = '$id'";
-
 	$update=mysqli_query($con,$sql);
 	$update1=mysqli_query($con,$sql4);
-
+	$update2=mysqli_query($con,$sql3);
 	if(!$update){
 		echo "failled";
-
 	}
-
+	
 	if(!$update1){
 		echo "failled";
 	}
-echo '<a href="../users/c_prof.php">HOME</a>';
-
+header("location:../users/company.php");
 }
-
-
   ?>
  </html>

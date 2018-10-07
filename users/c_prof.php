@@ -28,7 +28,9 @@ $row=mysqli_fetch_array($retriew);
  <body background="../images/d.jpg" >
 
 <div class="header-text3">
-			<form method="post" action="../user_functions/logout.php"><input type="submit" value="logout" name="logout"></form>
+			<form method="post" action="../user_functions/logout.php"><input type="submit" value="logout" name="logout" ></form>
+			
+
 			</div>
 
  	<div class="company_details">

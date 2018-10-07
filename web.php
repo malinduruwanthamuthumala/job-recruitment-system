@@ -7,7 +7,6 @@ session_start();
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
 </head>
 <body background="images/d.jpg">
 <div class="header">
@@ -17,18 +16,21 @@ session_start();
 
 <div class="header-text">
 	<div class="uppercase">
-		<div class="navbar">
+		<div class="navigation">
 			<ul class="nav">
 				<li><a href="web.php">HOME</a></li>
 				<li><a href="#login2">LOGIN</a></li>
-				
+				<li><a href="user_functions/view_job.php">FIND JOBS</a></li>
+				<li><a href="">ABOUT US</a></li>
+				<li><a href="">CONTACT</a></li>
 
 			</ul>	
 
-		</div>
+		
 
 
 	</div>
+</div>
 </div>
 
 
@@ -50,11 +52,11 @@ consequat. Duis aute irure dolor in reprehenderit</p></center>
 
 <div class="login1" id="login2">
 <h1 class="white">LOGIN HERE</h1>
-<form action="login.php" method="post"  name="login" >
+<form action="login.php" method="post">
 <label class="label white">email</label>
 <br><br>
 
-<input type="email" name="email" placeholder="email" class="input" >
+<input type="email" name="email" placeholder="email" class="input">
 <br><br>
 <label class="label white">password</label>
 <br><br>

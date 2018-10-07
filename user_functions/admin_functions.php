@@ -35,10 +35,37 @@ while($row=mysqli_fetch_array($result)){
 }
 
 
-if(isset($_POST['d_company'])){
-	
+if(isset($_POST['v_reports'])){
+	$sql="SELECT COUNT(user_id)
+FROM users";
+
+
+
+$sql1="SELECT COUNT(job_id)
+FROM job_posts";
+
+$sql2="SELECT COUNT(user_id)
+FROM companies";
+
+
+$result=mysqli_query($con,$sql);
+$result1=mysqli_query($con,$sql1);
+$result3=mysqli_query($con,$sql2);
+
+$count = mysqli_fetch_array($result);
+echo " number of users registerded are"."$count[0]";
+echo "<br>";
+$count1=mysqli_fetch_array($result1);
+
+echo "number of jobs available job posts"."$count1[0]";
+
+
+$count2=mysqli_fetch_array($result3);
+echo "<br>";
+echo "number of companies registered"."$count2[0]";
+
+echo "<br>";
+
+echo '<a href="../users/c_prof.php">back</a>';
 }
-
-
-
  ?>

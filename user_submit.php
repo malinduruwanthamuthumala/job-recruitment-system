@@ -4,15 +4,15 @@ require_once('include/connection.php');
 
 if (isset($_POST['submit'])){
 
-echo $fname=$_POST['fname'];
-echo $lname=$_POST['lname'];
-echo $email=$_POST['email'];
-echo $password=$_POST['pw'];
-echo $user_type=$_POST['utype'];
-echo $tel=$_POST['tp'];
+ $fname=$_POST['fname'];
+ $lname=$_POST['lname'];
+ $email=$_POST['email'];
+ $password=$_POST['pw'];
+ $user_type=$_POST['utype'];
+ $tel=$_POST['tp'];
 
 $encrypt_key="sagdg&^$$%$#%GJHGKFJHHGF";
-$password_encrypt = hash('sha256',$password.$encrypt_key);
+$password_encrypt = hash('$password.$encrypt_key');
 
 
 $querry="INSERT INTO users (Fname, Lname, email, password,usertype, telephone)
@@ -22,7 +22,7 @@ $insert=mysqli_query($con,$querry);
 if(!$insert){
 	echo" failled";
 }else{
-	header("location:web.php");
+	header("location:index.php");
 }
 }
 

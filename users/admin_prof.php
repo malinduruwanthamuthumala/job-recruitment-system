@@ -16,11 +16,19 @@ require_once('../include/connection.php');
 
 			<div>
 				<form action="../user_functions/admin_functions.php" method="post">
-					<input type="submit" value="delete customer" name="d_customer" class="reset">
+					<button onclick="myFunction()" name="d_customer" class="reset">delete customer</button>
+
+					
+<script>
+function myFunction() {
+  alert('if you delete the customer every details will be removed');
+}
+</script>
+					
 					<br>
 					<input type="submit" value="delete company" name="d_company" class="reset">
 					<br>
-					<input type="submit" value="view reports" name="d_company" class="reset">
+					<input type="submit" value="view reports" name="v_reports" class="reset">
 					<br>
 
 

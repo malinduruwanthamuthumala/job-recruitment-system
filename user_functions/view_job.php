@@ -14,7 +14,7 @@ $result=mysqli_query($con,$sql);
  	<link rel="stylesheet" type="text/css" href="../css/style.css">
  	<title></title>
  </head>
- <body>
+ <body background="../images/d.jpg">
 <?php 
 
 echo '<a href="../users/employ_prof.php" style="color:black">HOME</a>';
@@ -38,7 +38,7 @@ while($row=mysqli_fetch_array($result)){
   ?>
  </form>
 
-<table border="1" style="width:100%">
+<table border="1" style="width:100%;background-color:white">
 	<tr> <th>job title</th> <th>company name</th> <th>description</th> <th>attachments</th> </tr>
 <?php 
 if(isset($_POST['data_entry'])){

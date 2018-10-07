@@ -10,7 +10,7 @@ $result=mysqli_query($con,$sql);
 <head>
 	<title></title>
 </head>
-<body>
+<body background="../images/d.jpg">
 <table border="1" style="width:100%">
 	<tr>  <th>job id</th> <th>Name</th> <th>email</th> <th>view cv</th> </tr>
 <?php
